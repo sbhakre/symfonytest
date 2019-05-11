@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog Details{% endblock %}
+
+{% block body %}
+<div class="container">
+             
+  <table class="table">
+
+    <tbody>
+	
+      <tr>
+        <td>Title</td><td>{{ blog.title }}</td>
+        <td>Content</td><td>{{ blog.content }}</td>
+        <td>Created Date</td><td>{{ blog.createdon|date('Y-m-d H:i:s') }}</td>
+		<td>Updated Date</td><td>{{ blog.updatedon|date('Y-m-d H:i:s') }}</td>
+		<td>Created By</td><td>{{ blog.createdby }}</td>
+		<td>Updated By</td><td>{{ blog.updatedby }}</td>
+      </tr>
+	 
+    </tbody>
+  </table>
+</div>
+{% endblock %}
